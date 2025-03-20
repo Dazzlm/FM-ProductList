@@ -18,13 +18,12 @@ body {
     flex-direction: column;
     color: var(--rose-900);
     margin: 0px;
-    height: 100vh;
 }
 
 .Menu {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     background-color: var(--rose-100);
     padding: 30px 20px;
     max-width: 1200px;
@@ -49,19 +48,94 @@ body {
 
 .Cart{
     display: flex;
-    justify-content:flex-start;
     align-items: center;
+    
     flex-direction: column;
-    background-color:var(--rose-50) ;
+    background-color:white;
     border-radius: 10px;
-
     width: 28%;
-    height:28%;
+    min-height: 50px;
+    /* Para que no desaparezca cuando esté vacía */
+    padding: 20px;
+    overflow: hidden;
     
 }
 
-.Cart img{
-    width: 30%;
+.cart-item-list{
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height:auto;
+    margin: 0px;
+}
+
+.cart-item-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 20px;
+}
+
+.cart-item-card button{
+    display: flex;
+    justify-content: center;
+    background-color: var(--rose-50);
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: var(--rose-400);
+    border-width:2px ;
+}
+
+.cart-item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cart-item-info  dd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    color: var(--rose-500);
+}
+
+.cart-item-info dd p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    color: var(--rose-500);
+}
+
+.cart-item-info dd p span {
+    font-weight: bold; ;
+    color: var(--red);
+}
+
+.cart-item-list-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-item-list-empty img{
+    width: 50%;
     height: auto;
     margin: 0px;
     padding: 10px;
@@ -75,11 +149,78 @@ body {
     color: var(--red);
 }
 
-.Cart p{
+.cart-item-list-empty p{
     margin: 0px;
     padding: 0px;
-    font-size: 15px;
+    font-size: 13px;
     color: var(--rose-500);
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.cart-total button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    color: white;
+    border-style: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    padding: 0px;
+    font-size: 16px;
+    color: var(--rose-900);
+}
+.total p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: var(--rose-500);
+}
+
+
+.total h1{
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    font-weight: bold; ;
+    color: var(--rose-900);
+}
+
+.Carbon-Neutral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 45px;
+    margin: 10px;
+    padding: 0px;
+    border-radius: 10px; ;
+    background-color: var(--rose-100);
+    color: var(--rose-500);
+}
+
+.Carbon-Neutral p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
 }
 
 .menu-item-list{
@@ -88,7 +229,6 @@ body {
     padding: 20px 20px 0px 0px; 
     gap: 20px;
         
-    
 }
 .menu-item-card{
     position: relative;
@@ -128,7 +268,7 @@ padding: 0px;
 }
 
 .menu-item-card > button{
-    background-color: var(--rose-50);
+    background-color: white;
     color: var(--rose-900) ;
     border-color: var(--rose-900); 
     border-width: 1px;
@@ -195,6 +335,14 @@ padding: 0px;
 
 .quantity-controls > span {
     color: var(--rose-50);
+}
+
+hr {
+    display: flex ;
+    align-items: center;
+    justify-content: center ;
+    width: 89%;
+    border: 0.5px solid var(--rose-300);
 }
 
 footer {

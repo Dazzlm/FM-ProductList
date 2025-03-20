@@ -8,7 +8,7 @@ export async function productList(){
      products.forEach((product,index) => {
         const productCard = document.createElement("div");
         productCard.classList.add("menu-item-card");
-        productCard.id = `Card${index}`; 
+        productCard.id = `${index}`; 
 
         productCard.innerHTML = `
         

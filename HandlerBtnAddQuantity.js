@@ -1,3 +1,4 @@
+import { addCart } from "./helperAddCart.js";
 
 export function  handlerBtnAddQuantity() {
     document.querySelectorAll(".menu-item-card").forEach((card) => {
@@ -6,10 +7,17 @@ export function  handlerBtnAddQuantity() {
         const quantityElement = card.querySelector(".quantity");
         const increaseBtn = card.querySelector(".increaseQuantity");
         const decreaseBtn = card.querySelector(".decreaseQuantity");
+        const cartTotal = document.querySelector(".cart-total");
+        const cartItemListEmpty= document.querySelector(".cart-item-list-empty");
+        const cartItemList= document.querySelector(".cart-item-list");
 
-        addToCartBtn.addEventListener("click", () => {
+        addToCartBtn.addEventListener("click", async() => {
             addToCartBtn.style.display = "none"; // Ocultar "Add to Cart"
             quantityControls.style.display = "flex";
+            await addCart(card.id);
+            cartItemListEmpty.style.display = "none";
+            cartItemList.style.display = "flex";
+            cartTotal.style.display = "flex";
             console.log(card.id); // Mostrar controles
         });
 
@@ -26,6 +34,7 @@ export function  handlerBtnAddQuantity() {
             } else {
                 quantityControls.style.display = "none"; // Ocultar controles
                 addToCartBtn.style.display = "flex"; // Mostrar "Add to Cart"
+                
             }
             console.log(card.id);
         });

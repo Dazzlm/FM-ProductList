@@ -156,8 +156,29 @@
 
     <section class="Cart">
       <h1>Your Cart(<!-- Quantity -->)</h1>
-      <img src="/product-list-with-cart-main/assets/images/illustration-empty-cart.svg" alt="">
-      <p>Your added items will appear here</p>
+        
+          <dl class="cart-item-list" style="display: none;">
+            
+          </dl>
+
+        <div class="cart-total" style="display: none;">
+          <div class="total">
+            <p>OrderTotal: </p>
+            <h1>$5.50</h1>
+            
+          </div>
+          
+          <div class="Carbon-Neutral">
+            <img src="./assets/images/icon-carbon-neutral.svg" alt="Carbon-Neutral">
+            <p>This is a <b>carbon-neutral</b> delivery</p>
+          </div>
+          <button class="btnClearCart">Confirm Order</button>
+        </div>
+      <div class="cart-item-list-empty">
+      
+        <img src="/product-list-with-cart-main/assets/images/illustration-empty-cart.svg" alt="emptyCart"></img>
+        <p>Your added items will appear here</p>
+      </div>
     </section>
 
   </section>
