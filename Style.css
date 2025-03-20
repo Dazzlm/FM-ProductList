@@ -126,7 +126,7 @@ padding: 0px;
     color: var(--rose-500);
 }
 
-.menu-item-card  button{
+.menu-item-card > button{
     background-color: var(--rose-50);
     color: var(--rose-900) ;
     border-color: var(--rose-900); 
@@ -139,15 +139,53 @@ padding: 0px;
     justify-content: center;
     align-items: center;
     position: absolute;
-        bottom: 65px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 130px;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 130px;
 }
-.menu-item-card button img {
+.menu-item-card > button > img {
     width: 20px;
     height: auto;
+}
+
+.quantity-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background-color: var(--red);
+    border-radius: 25px;
+    border-style: none;
+    height: 35px;
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 130px;
+}
+
+.quantity-controls > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--rose-50) ;
+    border-color: var(--rose-50); 
+    border-width: 1px;
+    border-radius: 50px;
+    border-style: solid;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin : 15px;
+   
+}
+
+.quantity-controls > span {
+    color: var(--rose-50);
 }
 
 footer {
