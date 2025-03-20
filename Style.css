@@ -54,9 +54,10 @@ body {
     flex-direction: column;
     background-color:var(--rose-50) ;
     border-radius: 10px;
+
     width: 28%;
     height:28%;
-
+    
 }
 
 .Cart img{
@@ -181,7 +182,15 @@ padding: 0px;
     height: 20px;
     width: 20px;
     margin : 15px;
+    transition: 0.3s;
+
    
+}
+
+.quantity-controls>button:hover {
+    transition: 0.3s;
+    background-color: var(--rose-50);
+    color: var(--red);
 }
 
 .quantity-controls > span {
