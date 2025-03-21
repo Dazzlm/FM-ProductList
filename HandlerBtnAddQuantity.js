@@ -1,7 +1,7 @@
-import { addCart } from "./helperAddCart.js";
-import { deleteCart } from "./helperDeleteCart.js";
-import {showHidden}from "./helperShowHidden.js";
-import {setQuantityItemCart} from "./helperSetQuantityItemCart.js";
+import { addCart } from "./Helpers/helperAddCart.js";
+import { deleteCart } from "./Helpers/helperDeleteCart.js";
+import {showHidden}from "./Helpers/helperShowHidden.js";
+import {setQuantityItemCart} from "./Helpers/helperSetQuantityItemCart.js";
 
 export function  handlerBtnAddQuantity() {
     document.querySelectorAll(".menu-item-card").forEach((card) => {
