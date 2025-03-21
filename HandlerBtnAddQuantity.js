@@ -1,28 +1,28 @@
 import { addCart } from "./helperAddCart.js";
+import { deleteCart } from "./helperDeleteCart.js";
+import {showHidden}from "./helperShowHidden.js";
+import {setQuantityItemCart} from "./helperSetQuantityItemCart.js";
 
 export function  handlerBtnAddQuantity() {
     document.querySelectorAll(".menu-item-card").forEach((card) => {
         const addToCartBtn = card.querySelector(".Btn-AddToCart");
-        const quantityControls = card.querySelector(".quantity-controls");
         const quantityElement = card.querySelector(".quantity");
         const increaseBtn = card.querySelector(".increaseQuantity");
         const decreaseBtn = card.querySelector(".decreaseQuantity");
-        const cartTotal = document.querySelector(".cart-total");
-        const cartItemListEmpty= document.querySelector(".cart-item-list-empty");
-        const cartItemList= document.querySelector(".cart-item-list");
 
         addToCartBtn.addEventListener("click", async() => {
-            addToCartBtn.style.display = "none"; // Ocultar "Add to Cart"
-            quantityControls.style.display = "flex";
+            showHidden('BtnAddCart','none',card.id);
+            showHidden('quantityControls','flex',card.id);
             await addCart(card.id);
-            cartItemListEmpty.style.display = "none";
-            cartItemList.style.display = "flex";
-            cartTotal.style.display = "flex";
+            showHidden('cartListEmpty','none');
+            showHidden('cartList','flex');
             console.log(card.id); // Mostrar controles
         });
 
         increaseBtn.addEventListener("click", () => {
-            quantityElement.textContent = parseInt(quantityElement.textContent) + 1;
+            const quantity = parseInt(quantityElement.textContent) + 1;
+            quantityElement.textContent = quantity;
+            setQuantityItemCart(card.id,quantity);
             console.log(card.id);
         });
 
@@ -31,10 +31,11 @@ export function  handlerBtnAddQuantity() {
 
             if (quantity > 1) {
                 quantityElement.textContent = quantity - 1;
+                setQuantityItemCart(card.id,quantity - 1);
             } else {
-                quantityControls.style.display = "none"; // Ocultar controles
-                addToCartBtn.style.display = "flex"; // Mostrar "Add to Cart"
-                
+                deleteCart(card.id);
+                showHidden('quantityControls','none',card.id);
+                showHidden('BtnAddCart','flex',card.id);
             }
             console.log(card.id);
         });
