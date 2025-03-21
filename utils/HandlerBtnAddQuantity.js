@@ -2,7 +2,7 @@ import { addCart } from "../Helpers/helperAddCart.js";
 import { deleteCart } from "../Helpers/helperDeleteCart.js";
 import {showHidden}from "../Helpers/helperShowHidden.js";
 import {setQuantityItemCart} from "../Helpers/helperSetQuantityItemCart.js";
-
+import { setTotal } from "../Helpers/helperSetTotal.js";
 export function  handlerBtnAddQuantity() {
     document.querySelectorAll(".menu-item-card").forEach((card) => {
         const addToCartBtn = card.querySelector(".Btn-AddToCart");
@@ -16,14 +16,14 @@ export function  handlerBtnAddQuantity() {
             await addCart(card.id);
             showHidden('cartListEmpty','none');
             showHidden('cartList','flex');
-            console.log(card.id); // Mostrar controles
+            setTotal();
         });
 
         increaseBtn.addEventListener("click", () => {
             const quantity = parseInt(quantityElement.textContent) + 1;
             quantityElement.textContent = quantity;
             setQuantityItemCart(card.id,quantity);
-            console.log(card.id);
+            setTotal();
         });
 
         decreaseBtn.addEventListener("click", () => {
@@ -32,12 +32,13 @@ export function  handlerBtnAddQuantity() {
             if (quantity > 1) {
                 quantityElement.textContent = quantity - 1;
                 setQuantityItemCart(card.id,quantity - 1);
+                setTotal();
             } else {
                 deleteCart(card.id);
                 showHidden('quantityControls','none',card.id);
                 showHidden('BtnAddCart','flex',card.id);
             }
-            console.log(card.id);
+            
         });
 
         
