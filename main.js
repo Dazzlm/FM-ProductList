@@ -1,5 +1,5 @@
-import { handlerBtnAddQuantity } from "./HandlerBtnAddQuantity.js";
-import { productList } from "./productList.js";
+import { handlerBtnAddQuantity } from "./utils/HandlerBtnAddQuantity.js";
+import { productList } from "./utils/productList.js";
 
 await productList();
 handlerBtnAddQuantity();

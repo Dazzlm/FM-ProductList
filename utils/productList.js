@@ -1,4 +1,4 @@
-import { fetchProducts } from "./Helpers/helperFetchProducts.js";
+import { fetchProducts } from "../Helpers/helperFetchProducts.js";
 
 export async function productList(){
 
