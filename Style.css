@@ -18,6 +18,22 @@ body {
     flex-direction: column;
     color: var(--rose-900);
     margin: 0px;
+    padding: 20px;
+}
+
+.modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo oscuro semitransparente */
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        /* Asegura que está encima de todo */
 }
 
 .Menu {
@@ -26,9 +42,9 @@ body {
     align-items: flex-start;
     background-color: var(--rose-100);
     padding: 30px 20px;
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    max-width: 1200px;
+    
 }
 
 .menu-item{
@@ -74,8 +90,7 @@ body {
 .cart-item-card{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    
+    align-items: center; 
     width: 100%;
     height: auto;
     margin: 0 20px;

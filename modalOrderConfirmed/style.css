@@ -1,0 +1,198 @@
+:root {
+    /* Colores principales */
+    --red: hsl(14, 86%, 42%);
+    --green: hsl(159, 69%, 38%);
+
+    /* Tonos de Rose */
+    --rose-50: hsl(20, 50%, 98%);
+    --rose-100: hsl(13, 31%, 94%);
+    --rose-300: hsl(14, 25%, 72%);
+    --rose-400: hsl(7, 20%, 60%);
+    --rose-500: hsl(12, 20%, 44%);
+    --rose-900: hsl(14, 65%, 9%);
+}
+
+body {
+    background-color: var(--rose-100);
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rose-900);
+    margin: 0px;
+    height: 100vh;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    max-height: 80vh;
+    padding: 30px;
+    border-radius: 20px;
+    min-height: 50px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.modal> h1{
+    margin: 20px 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 30px;
+}
+
+.modal > p{
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.modal> button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.order-details{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rose-100);
+    width: 90%;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 10px;
+    min-height: 50px;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.order-details::-webkit-scrollbar {
+    display: none;
+}
+
+.order-details h1{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+.item-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.item-detail> :nth-child(2) {
+    margin-right: auto;
+}
+
+.item-detail>img{ 
+    display: flex;
+    width: 50px;
+    height: 50px;
+
+}
+
+.priceAcum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.priceAcum p{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.priceAcum b{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    padding: 0px;
+    margin: 0px;
+}
+
+.product-detail dt{
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+.product-detail dd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90px; ;
+    padding: 0px;
+    margin: 0px;
+}
+.product-detail dd p {
+    display: flex;
+    color: var(--rose-500);
+    padding: 0px;
+    margin: 0px;
+}
+.product-detail dd p>span{ 
+    display: flex;
+    color: var(--red);
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+.totalOrderModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.totalOrderModal p{
+    display: flex;
+    color: var(--rose-900);
+    margin: 0px;
+    padding: 0px;
+}
+
+.modalhr {
+    display: flex ;
+    align-items: center;
+    justify-content: center ;
+    margin: 15px 0px ;
+    width: 100%;
+    border: 0.5px solid var(--rose-300);
+}
+
