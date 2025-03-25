@@ -13,7 +13,7 @@ export async function productList(){
         productCard.innerHTML = `
         
           <img  src="${product.image.desktop}" alt="${product.name}">
-          <button class="Btn-AddToCart" ><img src="/product-list-with-cart-main/assets/images/icon-add-to-cart.svg" alt="addCart"></img>Add to
+          <button class="Btn-AddToCart" ><img src="./assets/images/icon-add-to-cart.svg" alt="addCart"></img>Add to
             Cart</button>
           <div class="quantity-controls" style="display:none ;">
             <button class="decreaseQuantity">-</button>

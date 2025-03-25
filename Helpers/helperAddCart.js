@@ -1,5 +1,6 @@
 import { fetchProducts } from "./helperFetchProducts.js";
 import { deleteCart } from "./helperDeleteCart.js";
+import { countItems } from "./helperCountItems.js";
 export async function  addCart(productId) {
     const products = await fetchProducts();
     const cartItemList = document.querySelector(".cart-item-list");
