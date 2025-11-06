@@ -1,0 +1,19 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- deployment: DeployToVM
+  displayName: Test deploy to VM
+  environment: Entorno   
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - script: echo "deploy ejecutado" > deploy.txt
+          displayName: Create deploy file in VM
+
+        - script: dir
+          displayName: list files
